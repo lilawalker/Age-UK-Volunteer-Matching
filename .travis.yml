@@ -1,0 +1,13 @@
+language: ruby
+rvm:
+  - 2.6.3
+
+services:
+  - postgresql
+
+env:
+  - POSTGRES_USER=travis POSTGRES_PASSWORD=password POSTGRES_HOST=localhost POSTGRES_DEVELOPMENT_DB=age_uk_volunteer_matching POSTGRES_TEST_DB=age_uk_volunteer_matching POSTGRES_DB=age_uk_volunteer_matching
+
+before_script:
+  - bundle install
+  - bundle exec rake db:setup

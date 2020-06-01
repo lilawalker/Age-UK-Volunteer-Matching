@@ -9,12 +9,14 @@ Things you may want to cover:
 
 * System dependencies
 
-* Configuration
+* Initial setup
+  - Bundle install
+  - rails db:setup
 
-* Database creation
-
-* Database initialization
-
+* Run the app
+  - rails s
+  - navigate to http://localhost:3000/
+  
 * How to run the test suite
 
 * Services (job queues, cache servers, search engines, etc.)
