@@ -6,7 +6,7 @@ services:
   - postgresql
 
 env:
-  - POSTGRES_USER=travis POSTGRES_PASSWORD=password POSTGRES_HOST=localhost POSTGRES_DEVELOPMENT_DB=age_uk_volunteer_matching POSTGRES_TEST_DB=age_uk_volunteer_matching POSTGRES_DB=age_uk_volunteer_matching
+  - POSTGRES_USER=travis POSTGRES_PASSWORD=password POSTGRES_HOST=localhost POSTGRES_DEVELOPMENT_DB=volunteer_matching_dev POSTGRES_TEST_DB=volunteer_matching_test POSTGRES_DB=volunteer_matching
 
 before_script:
   - bundle exec rake db:create
