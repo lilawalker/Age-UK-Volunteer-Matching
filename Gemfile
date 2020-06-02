@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap', '~> 4.5.0'
 gem 'jquery-rails'
+gem 'foreman'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -32,6 +33,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 # Authentication
 gem 'devise'
+gem 'carrierwave', '~> 2.0'
+gem 'fog-aws'
 
 # Rake for raking
 gem 'rake'
