@@ -1,5 +1,5 @@
 
-<%= form_for @user, url: new_update_path, method: :put do |f| %>
+<%= form_for @user, url: url_for(controller: 'registrations', action: 'update') do |f| %>
 
   <div class="field">
     <%= f.label :telephone %><br />
