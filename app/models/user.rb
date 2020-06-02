@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   has_many :interests, through: :userinterests, dependent: :destroy
 
+  mount_uploader :image, ImageUploader
+
 end
