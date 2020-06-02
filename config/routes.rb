@@ -12,6 +12,11 @@ Rails.application.routes.draw do
 
   root to: "home#index"
 
+
+  get '/add_info', to: 'registrations#add_info'
+  get '/interests', to: 'interests#add_interests'
+  get '/profile_show', to: 'profiles#show'
+  get '/confirmation', to: 'information#confirmation'
   # get '/tell_us_about', to: 'information#tell_us_about_yourself'
   # get '/interests', to: 'information#interests'
   # get '/profile_show', to: 'profiles#show'
