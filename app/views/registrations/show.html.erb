@@ -1,0 +1,25 @@
+<% profile = @possible_matches.first %>
+
+  <div class="container" style="margin-top: 100px;">
+    <div class="row">
+      <div class="col-3">
+        <img class="profile-picture" src="https://media1.popsugar-assets.com/files/thumbor/oNBqNgBJYzgjNqYE43Qv1QN6mxU/0x124:2212x2336/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2020/03/03/014/n/1922398/4eb760fb5e5ee653d195f6.46191142_/i/Justin-Timberlake.jpg" >
+      </div>
+      <div class="col-6">
+        <h4><%= profile.name %></h4>
+        <p><%= profile.bio %></p>
+      </div>
+      <div class="col-3">
+        <h4>Interests</h4>
+        <ul>
+          <li>profile</li>
+          <li>walking</li>
+          <li>swimming</li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-center">
+      <%= link_to "Contact", '#', :method => :get, :class => "homepage-button" %>
+      <%= link_to "Next", '#', :method => :get, :class => "homepage-button" %>
+    </div>
+  </div>

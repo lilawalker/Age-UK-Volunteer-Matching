@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   devise_scope :user do
     get "/add_info" => "registrations#add_info", :as => "add_information"
     get "/add_image" => "registrations#add_image", :as => "add_image"
+    get "/show" => "registrations#show", :as => "show"
   end
 
   get "/add_interests" => "interests#add_interests", :as => "add_interests"

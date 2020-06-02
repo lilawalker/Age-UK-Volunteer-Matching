@@ -24,13 +24,17 @@ class RegistrationsController < Devise::RegistrationsController
         if user_params[:image] == nil
           format.html { redirect_to add_interests_path }
         else
-          format.html { redirect_to root_path }
+          format.html { redirect_to show_path }
         end
       else
         format.html { render :add_info }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def show
+    @possible_matches = User.all.where("volunteer != '#{current_user.volunteer}'")
   end
 
   private
