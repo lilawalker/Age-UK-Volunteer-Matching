@@ -11,8 +11,28 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require bootstrap
+
+*= require_tree .
+
+*= require_self
  */
+ 
+
  @import url('https://fonts.google.com/specimen/Raleway?preview.text=Sign+In&preview.text_type=custom');
+ .buttonChecked {
+  display: inline-block;
+  font-size: 25px;
+  font-family: Raleway;
+  border: 1px solid black;
+  text-align: center;
+  max-width: 200px;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 14px;
+  box-shadow: 0 0 5px black;
+  background-color: coral;
+}
 
  .navbar-button {
     display: inline-block;
@@ -23,7 +43,7 @@
     text-align: center;
     margin: 10px;
     padding: 5px;
-    border-radius: 14px;
+    border-radius: 17px;
     box-shadow: 0 0 5px black;
  }
  
@@ -41,7 +61,7 @@
   color: black;
 }
 
-.button {
+.homepage-button {
   display: inline-block;
   font-size: 25px;
   font-family: Raleway;
@@ -54,9 +74,34 @@
   box-shadow: 0 0 5px black;
 }
 
+.homepage-button:hover {
+  box-shadow: 0 0 10px black;
+}
+
+.button {
+  display: inline-block;
+  font-size: 25px;
+  font-family: Raleway;
+  border: 1px solid black;
+  text-align: center;
+  max-width: 200px;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 14px;
+  box-shadow: 0 0 5px black;
+}
+
 .button:hover {
   box-shadow: 0 0 10px black;
 }
 
 
-
+.check{
+  background-color: red;
+}
+.profile-picture{
+  border-radius: 50%;
+  width: 220px;
+  height: 220px;
+  box-shadow: 0 0 10px;
+}

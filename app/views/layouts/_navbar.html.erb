@@ -1,6 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-between" style="background-color: white; border-bottom: 1px solid black;box-shadow: 0 0 10px ;">
 <a class="navbar-brand" href="/"><%= image_tag asset_path("https://www.willaid.org.uk/sites/default/files/2017-09/age_uk_logo.png"), width: "70px", height: "70px" %></a>
-  <div class="collapse navbar-collapse">
+
+  <div class="navbar"">
   <ul class="navbar-nav ml-auto">
   
       <% if current_user %>
@@ -11,10 +12,9 @@
       <li class="nav-item">
         <%= link_to "Log In", new_user_session_path, :class =>"navbar-button" %> 
       </li>
-      <li class="nav-item">
-        <%= link_to "Sign Up", new_user_registration_path, :class =>"navbar-button" %> 
-      </li>
+    
       <% end %>
     </ul>
   </div>
 </nav>
+
