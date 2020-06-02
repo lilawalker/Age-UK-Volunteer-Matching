@@ -3,6 +3,12 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => {registrations: "registrations"}
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
+  devise_scope :user do
+    get "/add_info" => "registrations#add_info", :as => "add_information"
+  end
+
+  get "/add_interests" => "interests#add_interests", :as => "add_interests"
+
   root to: "home#index"
 
   get '/tell_us_about', to: 'information#tell_us_about_yourself'
