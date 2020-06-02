@@ -24,6 +24,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
     super
   end
 
+  def add_info
+
+  end
+
   # DELETE /resource
   # def destroy
   #   super
@@ -56,9 +60,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   render 'tell_us_about_yourself'
   # end
 
-  # def add_info
-
-  # end
+  
 
   # The path used after sign up for inactive accounts.
   # def after_inactive_sign_up_path_for(resource)
