@@ -25,6 +25,9 @@
       <%= f.label :image %>
       <%= f.file_field :image %>
     </div>
+  <div class="field">
+    <%= f.hidden_field :volunteer, value: params[:volunteer] %>
+  </div>
 
   <div class="actions">
     <%= f.submit "Sign up" %>
