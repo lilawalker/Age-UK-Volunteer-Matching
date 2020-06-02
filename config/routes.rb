@@ -11,4 +11,5 @@ Rails.application.routes.draw do
 
   get '/tell_us_about', to: 'information#tell_us_about_yourself'
   get '/interests', to: 'information#interests'
+  get '/profile_show', to: 'profiles#show'
 end
