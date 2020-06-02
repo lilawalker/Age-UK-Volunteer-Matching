@@ -6,6 +6,10 @@ class UserinterestsController < ApplicationController
   def update
     puts 'hi'
     @user = current_user
-    redirect_to profile_show_path
+    puts(params[:value])
+    puts(@user[:id])
+    h = { "sports" => 20000,"reading" => 20001, "baking" => 20002, "gardening" => 20003, "dancing" => 20004, "music" => 20005, "languages" => 20006, "fishing" => 20007, "walking" => 20008 }
+    Userinterest.new(user_id: @user[:id], interest_id: h[params[:value]]).save(validate: false)
+
   end
 end
