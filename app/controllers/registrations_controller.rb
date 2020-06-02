@@ -9,7 +9,7 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def add_info
-
+    @user = current_user
   end
 
   def update
