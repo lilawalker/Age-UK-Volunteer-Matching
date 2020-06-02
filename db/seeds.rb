@@ -6,11 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# Add Users
 users = User.create([{ id: 10000, email: 'greg@example.com', password: 'password123', volunteer: true, name: 'Greg', telephone: "01235823674", location: 'BH1 1AJ', bio: 'Hi I am Greg and I am looking to help in anyway I can. Hope to hear from you soon.' },
                     { id: 10001, email: 'anne@example.com', password: 'password123', volunteer: true, name: 'Anne', telephone: "01865478293", location: 'OX14 4DE', bio: 'Hey, Anne here. ready to help you in anyway you need. The world is better together.' },
                     { id: 10002, email: 'mark@example.com', password: 'password123', volunteer: false, name: 'Mark', telephone: "07728034562", location: 'CF14 3PE', bio: "Hi. I am Mark. I always love an evening walk to the waterside!" },
                     { id: 10003, email: 'louise@example.com', password: 'password123', volunteer: false, name: 'Louise', telephone: "07832106633", location: 'SW11 5GQ', bio: 'Hi I am Louise, looking for someone to enjoy a nice evening conversation with.' }])
 
+# Interests
 Interest.new(id: 20000, name: 'sports').save(validate: false)
 Interest.new(id: 20001, name: 'reading').save(validate: false)
 Interest.new(id: 20002, name: 'baking').save(validate: false)
@@ -40,5 +42,9 @@ Userinterest.new(user_id: 10003, interest_id: 20002).save(validate: false)
 Userinterest.new(user_id: 10003, interest_id: 20003).save(validate: false)
 Userinterest.new(user_id: 10003, interest_id: 20005).save(validate: false)
 Userinterest.new(user_id: 10003, interest_id: 20006).save(validate: false)
+
+#  pre-matched users
+Match.new(user_id: 10002, volunteer_id: 10000).save(validate: false)
+
 
 puts "Seeds have been set and you're ready to go!"
