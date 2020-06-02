@@ -5,7 +5,7 @@
     <title>Age UK Matching App</title>
   </head>
   <body>
-    <%= button_to "I'd like to meet volunteers", new_user_registration_path, :method => :get %>
+    <%= button_to "I'd like to meet volunteers", {:controller => "devise/registrations", :action => "new", :volunteer => true}, :method => :get %>
     <%= button_to "Become a volunteer", new_user_registration_path, :method => :get %>
   </body>
 </html>
