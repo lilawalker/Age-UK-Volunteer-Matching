@@ -9,4 +9,5 @@ Rails.application.routes.draw do
 
   root to: "home#index"
 
+  get '/tell_us_about', to: 'information#tell_us_about_yourself'
 end
