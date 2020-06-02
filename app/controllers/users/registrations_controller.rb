@@ -51,14 +51,14 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # The path used after sign up.
-  def after_sign_up_path_for(resource)
-    # add_information_path
-    render 'tell_us_about_yourself'
-  end
+  # def after_sign_up_path_for(resource)
+  #   # add_information_path
+  #   render 'tell_us_about_yourself'
+  # end
 
-  def add_info
+  # def add_info
 
-  end
+  # end
 
   # The path used after sign up for inactive accounts.
   # def after_inactive_sign_up_path_for(resource)
