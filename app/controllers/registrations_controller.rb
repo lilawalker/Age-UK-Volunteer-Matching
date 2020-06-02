@@ -17,7 +17,7 @@ class RegistrationsController < Devise::RegistrationsController
 
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to add_interests_path }
+        format.html { redirect_to add_userinterests_path }
       else
         format.html { render :add_info }
         format.json { render json: @comment.errors, status: :unprocessable_entity }

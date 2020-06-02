@@ -1,8 +1,29 @@
-<div class="container text-center">
+
+
+
+
+  <%= form_for @userinterest, url: url_for(controller: 'userinterests', action: 'update') do |f| %>
+
+    <div class="field">
+      <%= f.label :user_id %><br />
+      <%= f.text_field :user_id %>
+    </div>
+    <div class="field">
+      <%= f.label :interest_id %><br />
+      <%= f.text_field :interest_id %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Next" %>
+    </div>
+  <% end %>
+      
+
+  <!-- <div class="container text-center">
   <h3 style="margin-top: 30px; margin-bottom: 30px;">Tell us about your interests</h3>
-  <form style="margin-left: 20%;">
-    <div class="row text-left">
-      <div class="col-md-4 button" id="1">
+  <form style="margin-left: 20%;"> -->
+    <!-- <div class="row text-left"> -->
+
+<!-- <div class="col-md-4 button" id="1">
         <input style="display: none;" onclick="toggleClass('1')" class="form-check-input" type="checkbox" id="inlineCheckbox1" value="baking">
         <label class="form-check-label" for="inlineCheckbox1">Baking</label>
       </div>
@@ -14,6 +35,7 @@
         <input style="display: none;" class="form-check-input" onclick="toggleClass('3')" type="checkbox" id="inlineCheckbox3" value="gardening">
         <label class="form-check-label" for="inlineCheckbox3">Gardening</label>
       </div>
+      
     </div>
     <div class="row text-left">
       <div class="col-md-4 button" id="4">
@@ -43,17 +65,21 @@
         <label class="form-check-label" for="inlineCheckbox9">Music</label>
       </div>
     </div>
+
+  
   
     <div>
       <button style="margin-top: 30px;" type="submit" class="btn btn-primary">Next Step...</button>
     </div>
 </form>
-  <%= link_to 'Next', add_image_path %>
+
+<% end %>
+
+<%= link_to 'Next', add_image_path %>
 </div>
 <script>
 function toggleClass(id) {
   var element = document.getElementById(id);
   element.classList.toggle("buttonChecked");
 }
-</script>
-
+</script> -->
