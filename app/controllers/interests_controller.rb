@@ -1,4 +1,4 @@
-class InterestController < ApplicationController
+class InterestsController < ApplicationController
   def add_interests
 
   end
