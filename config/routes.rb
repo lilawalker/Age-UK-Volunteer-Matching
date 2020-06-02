@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     get "/add_info" => "registrations#add_info", :as => "add_information"
   end
 
+  get "/add_interests" => "interests#add_interests", :as => "add_interests"
+
   root to: "home#index"
 
 end
