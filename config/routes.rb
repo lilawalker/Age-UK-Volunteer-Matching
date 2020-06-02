@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     get "/add_info" => "registrations#add_info", :as => "add_information"
+    post "/add_info" => "registrations#update", :as => "update_information"
+    put "/add_info" => "registrations#update", :as => "new_update"
     get "/add_image" => "registrations#add_image", :as => "add_image"
   end
 

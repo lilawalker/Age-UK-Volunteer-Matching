@@ -9,7 +9,7 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def add_info
-
+    @user = current_user
   end
 
   def update
@@ -28,7 +28,8 @@ class RegistrationsController < Devise::RegistrationsController
   private
 
   def user_params
-    params.permit(:name, :telephone, :location, :bio)
+    # params.permit(user: [:name, :telephone, :location, :bio])
+    params.require(:user).permit(:name, :telephone, :location, :bio)
   end
 
 end
