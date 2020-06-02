@@ -11,6 +11,7 @@ users = User.create([{ id: 10000, email: 'greg@example.com', password: 'password
                     { id: 10002, email: 'mark@example.com', password: 'password123', volunteer: false, name: 'Mark', telephone: "07728034562", location: 'CF14 3PE', bio: "Hi. I am Mark. I always love an evening walk to the waterside!" },
                     { id: 10003, email: 'louise@example.com', password: 'password123', volunteer: false, name: 'Louise', telephone: "07832106633", location: 'SW11 5GQ', bio: 'Hi I am Louise, looking for someone to enjoy a nice evening conversation with.' }])
 
+# Interests
 Interest.new(id: 20000, name: 'sports').save(validate: false)
 Interest.new(id: 20001, name: 'reading').save(validate: false)
 Interest.new(id: 20002, name: 'baking').save(validate: false)
