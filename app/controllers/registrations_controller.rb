@@ -12,12 +12,20 @@ class RegistrationsController < Devise::RegistrationsController
     @user = current_user
   end
 
+  def add_image
+    @user = current_user
+  end
+
   def update
     @user = current_user
 
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to add_interests_path }
+        if user_params[:image] == nil
+          format.html { redirect_to add_interests_path }
+        else
+          format.html { redirect_to root_path }
+        end
       else
         format.html { render :add_info }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
@@ -28,8 +36,7 @@ class RegistrationsController < Devise::RegistrationsController
   private
 
   def user_params
-    # params.permit(user: [:name, :telephone, :location, :bio])
-    params.require(:user).permit(:name, :telephone, :location, :bio)
+    params.require(:user).permit(:name, :telephone, :location, :bio, :image)
   end
 
 end
