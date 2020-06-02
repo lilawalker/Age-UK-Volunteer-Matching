@@ -1,5 +1,5 @@
 class Interest < ApplicationRecord
 
-  has_many :users, through: :user_interests
-  
+  has_many :users, through: :userinterests
+
 end
