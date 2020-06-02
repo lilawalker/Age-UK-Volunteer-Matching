@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<a class="navbar-brand" href="/"><%= image_tag asset_path("https://www.willaid.org.uk/sites/default/files/2017-09/age_uk_logo.png"), width: "70px", height: "70px" %></a>
+  <div class="collapse navbar-collapse">
+  <ul class="navbar-nav ml-auto">
+  
+      <% if current_user %>
+        <li class="nav-item">
+          <%= link_to "Log Out", destroy_user_session_path, :method => :delete, :class =>"nav-link" %> 
+        </li>
+      <% else %>
+      <li class="nav-item">
+        <%= link_to "Log In", new_user_session_path, :class =>"navbar-button" %> 
+      </li>
+      <li class="nav-item">
+        <%= link_to "Sign Up", new_user_registration_path, :class =>"navbar-button" %> 
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</nav>
