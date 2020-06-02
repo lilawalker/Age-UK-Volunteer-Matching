@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     get "/show" => "registrations#show", :as => "show"
   end
 
+   resources :matches
+
   get "/add_interests" => "interests#add_interests", :as => "add_interests"
 
   root to: "home#index"

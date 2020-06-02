@@ -9,11 +9,11 @@ class MatchesController < ApplicationController
 
         # @match = Match.create.where("'#{current_user.volunteer}' != User.first.volunteer'")
 
-        @matches = User.all.where("volunteer != '#{current_user.volunteer}'")
+        # @matches = User.all.where("volunteer != '#{current_user.volunteer}'")
 
-        @matches.each |match| do
-            Match.create(match.user)
-        end
+        # @matches.each |match| do
+        #     Match.create(match.user)
+        # end
 
         # bookings = DatabaseConnection.query("SELECT * FROM bookings INNER JOIN spaces ON bookings.space_id = spaces.space_id WHERE spaces.user_id = '#{user_id}' AND bookings.status = '#{status}';")
 
@@ -22,4 +22,12 @@ class MatchesController < ApplicationController
 
       
     end
+
+
+    def create
+        @volunteer = User.find(params[:match])
+        @match = current_user.older_relationships.create(volunteer_id: @volunteer.id)
+    end
+
+
 end

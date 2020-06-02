@@ -1,4 +1,4 @@
-<% profile = @possible_matches.first %>
+<% @possible_matches.each do |profile| %>
 
   <div class="container" style="margin-top: 100px;">
     <div class="row">
@@ -12,14 +12,19 @@
       <div class="col-3">
         <h4>Interests</h4>
         <ul>
-          <li>profile</li>
-          <li>walking</li>
-          <li>swimming</li>
+          <% @interests = Interest.joins(:userinterests).where(userinterests: { user_id: profile.id }) %>
+          <% @interests.each do |interest| %>
+            <li><%= interest.name %></li>
+          <% end %>
         </ul>
       </div>
     </div>
     <div class="text-center">
-      <%= link_to "Contact", '#', :method => :get, :class => "homepage-button" %>
-      <%= link_to "Next", '#', :method => :get, :class => "homepage-button" %>
+      <%# <%= link_to "Contact #{profile.name}", '#', :method => :get, :class => "homepage-button" %>
+      <%= button_to "Contact #{profile.name}", {:controller => "matches", :action => "create"}, params: {match: profile}, :method => :post, :class => "homepage-button"%>
+
+      <%# <%= link_to "Next", '#', :method => :get, :class => "homepage-button" %> 
     </div>
   </div>
+  <hr>
+<% end %>  
