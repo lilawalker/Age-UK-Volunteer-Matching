@@ -1,27 +1,41 @@
-
+<div class="container" style="margin-top: 50px;">
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-5 col-form-label" style="text-align: end;">
+      <img src="https://www.willaid.org.uk/sites/default/files/2017-09/age_uk_logo.png" alt="" style="height: 150px; width: auto; margin-top: -50px;">
+    </label>
+    <div class="col-sm-7">
+      <h3>We want to find you the perfect match. Tell us a bit about yourself...</h3>
+    </div>
+  </div>
 <%= form_for @user, url: url_for(controller: 'registrations', action: 'update') do |f| %>
-
-  <div class="field">
-    <%= f.label :telephone %><br />
-    <%= f.text_field :telephone, autofocus: true %>
+  <div class="form-group row field">
+      <%= f.label :telephone, :class => "col-sm-5 col-form-label", :style => "text-align: end;"%>
+      <div class="col-sm-7">
+        <%= f.text_field :telephone, autofocus: true, :class => "form-control" %>
+      </div>
+  </div>
+  <div class="form-group row field">
+      <%= f.label :name, :class => "col-sm-5 col-form-label", :style => "text-align: end;"%>
+      <div class="col-sm-7">
+        <%= f.text_field :name, :class => "form-control" %>
+      </div>
+  </div>
+  <div class="form-group row field">
+      <%= f.label :location, :class => "col-sm-5 col-form-label", :style => "text-align: end;"%>
+      <div class="col-sm-7">
+        <%= f.text_field :location, :class => "form-control" %>
+      </div>
+  </div>
+  <div class="form-group row field">
+      <%= f.label :write_a_few_sentences_about_yourself, :class => "col-sm-5 col-form-label", :style => "text-align: end;"%>
+      <div class="col-sm-7">
+        <%= f.text_field :bio, :class => "form-control" %>
+      </div>
   </div>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= f.label :location %><br />
-    <%= f.text_field :location %>
-  </div>
-
-  <div class="field">
-    <%= f.label :write_a_few_sentences_about_yourself %><br />
-    <%= f.text_field :bio %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Next" %>
+  <div class="actions text-right">
+    <%= f.submit "Next", :class => "btn btn-primary" %>
   </div>
 <% end %>
+</div>
+
