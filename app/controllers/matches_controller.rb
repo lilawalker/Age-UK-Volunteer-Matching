@@ -4,7 +4,6 @@ class MatchesController < ApplicationController
   end
 
   def create
-    p params
     @volunteer = User.find(params[:match])
     @match = current_user.older_relationships.create(volunteer_id: @volunteer.id)
     redirect_to confirmation_path
@@ -14,11 +13,6 @@ class MatchesController < ApplicationController
   def confirmation
     @profile = session[:volunteer_id]
     @current_profile = User.find(@profile)
-    
-    puts '------'
-    p params
-    p @profile
-    puts '------'
   end
 
 end
