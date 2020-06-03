@@ -1,5 +1,7 @@
 class MatchesController < ApplicationController
   def index
+    @matches = Match.where("volunteer_id = #{current_user.id}")
+    # @matches = User.joins(:matches).where(matches: { volunteer_id: current_user.id })
   end
 
   def create
