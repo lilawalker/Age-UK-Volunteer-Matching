@@ -22,15 +22,15 @@ ActiveRecord::Schema.define(version: 2020_06_02_145309) do
   end
 
   create_table "matches", force: :cascade do |t|
-    t.string "user_id"
-    t.string "volunteer_id"
+    t.bigint "older_id"
+    t.bigint "volunteer_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "userinterests", force: :cascade do |t|
-    t.string "user_id"
-    t.string "interest_id"
+    t.bigint "user_id"
+    t.bigint "interest_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
