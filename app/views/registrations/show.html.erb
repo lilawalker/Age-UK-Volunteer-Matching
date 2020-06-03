@@ -1,27 +1,27 @@
 <div class="container" style="margin-top: 70px;">
-<h3 class="text-center">Here are some matches based on your interests. Get in contact with them to start a conversation, they’re waiting to hear from you! </h3>
-<% @possible_matches.each do |profile| %>
-    <div class="row" style="margin-top:70px">
-      <div class="col-3">
-      <%= image_tag profile.image_url.to_s, alt: "image", class: "profile-picture" %>
+  <h3 class="text-center">Here are some matches based on your interests. Get in contact with them to start a conversation, they’re waiting to hear from you! </h3>
+  <% @possible_matches.each do |profile| %>
+      <div class="row" style="margin-top:70px">
+        <div class="col-3">
+        <%= image_tag profile.image_url.to_s, alt: "image", class: "profile-picture" %>
+        </div>
+        <div class="col-6">
+          <h4><%= profile.name %></h4>
+          <p><%= profile.bio %></p>
+        </div>
+        <div class="col-3">
+          <h4>Interests</h4>
+          <ul>
+            <% @interests = Interest.joins(:userinterests).where(userinterests: { user_id: profile.id }) %>
+            <% @interests.each do |interest| %>
+              <li><%= interest.name %></li>
+            <% end %>
+          </ul>
+        </div>
       </div>
-      <div class="col-6">
-        <h4><%= profile.name %></h4>
-        <p><%= profile.bio %></p>
+      <div class="text-center">
+        <%= button_to "Contact #{profile.name}", {:controller => "matches", :action => "create"}, params: {match: profile}, :method => :post, :class => "homepage-button"%>
       </div>
-      <div class="col-3">
-        <h4>Interests</h4>
-        <ul>
-          <% @interests = Interest.joins(:userinterests).where(userinterests: { user_id: profile.id }) %>
-          <% @interests.each do |interest| %>
-            <li><%= interest.name %></li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
-    <div class="text-center">
-      <%= button_to "Contact #{profile.name}", {:controller => "matches", :action => "create"}, params: {match: profile}, :method => :post, :class => "homepage-button"%>
-    </div>
-  </div>
-  <hr>
-<% end %>
+    <hr>
+  <% end %>
+</div>

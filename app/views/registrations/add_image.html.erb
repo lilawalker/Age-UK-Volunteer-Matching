@@ -1,13 +1,14 @@
 <div class="container text-center" style="margin-top: 50px;">
+<h3>Please upload an image of yourself</h3>
+
 <%= form_for @user, url: url_for(controller: 'registrations', action: 'update') do |f| %>
 
   <div class="field">
-    <%= f.label :image %><br>
     <%= f.file_field :image, :style => "margin-left:12%" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up", :class => "btn btn-primary", :style => "margin-top: 10px" %>
+    <%= f.submit "Upload Image", :class => "btn btn-primary", :style => "margin-top: 10px" %>
   </div>
 <% end %>
 </div>
