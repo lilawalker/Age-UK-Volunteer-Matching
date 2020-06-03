@@ -3,7 +3,7 @@
 <% @possible_matches.each do |profile| %>
     <div class="row" style="margin-top:70px">
       <div class="col-3">
-        <img class="profile-picture" src="https://media1.popsugar-assets.com/files/thumbor/oNBqNgBJYzgjNqYE43Qv1QN6mxU/0x124:2212x2336/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2020/03/03/014/n/1922398/4eb760fb5e5ee653d195f6.46191142_/i/Justin-Timberlake.jpg" >
+      <%= image_tag profile.image_url.to_s, alt: "image", class: "profile-picture" %>
       </div>
       <div class="col-6">
         <h4><%= profile.name %></h4>
@@ -20,12 +20,8 @@
       </div>
     </div>
     <div class="text-center">
-      <%# <%= link_to "Contact #{profile.name}", '#', :method => :get, :class => "homepage-button" %>
       <%= button_to "Contact #{profile.name}", {:controller => "matches", :action => "create"}, params: {match: profile}, :method => :post, :class => "homepage-button"%>
-
-      <%# <%= link_to "Next", '#', :method => :get, :class => "homepage-button" %> 
-    
+    </div>
   </div>
   <hr>
-<% end %>  
-</div>
+<% end %>
