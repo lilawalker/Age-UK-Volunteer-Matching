@@ -6,13 +6,18 @@ Rails.application.routes.draw do
   devise_scope :user do
     get "/add_info" => "registrations#add_info", :as => "add_information"
     get "/add_image" => "registrations#add_image", :as => "add_image"
+    get "/show" => "registrations#show", :as => "show"
   end
 
-  get "/add_interests" => "interests#add_interests", :as => "add_interests"
+
+  resources :matches
+  
+  get "/add_userinterests" => "userinterests#add_userinterests", :as => "add_userinterests"
+
 
   root to: "home#index"
 
-
+  post "/add_userinterests", to: 'userinterests#update'
   get '/add_info', to: 'registrations#add_info'
   get '/interests', to: 'interests#add_interests'
   get '/profile_show', to: 'profiles#show'

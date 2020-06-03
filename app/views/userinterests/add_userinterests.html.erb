@@ -1,0 +1,49 @@
+<div class="container text-center">
+  <h3 style="margin-top: 30px; margin-bottom: 30px;">Tell us about your interests</h3>
+  <div style="margin-left: 20%;">
+    <div class="row text-left">
+      <div class="col-md-4 button" id="1">
+          <%= button_to "Baking", action: "update", value: 'baking' %>
+      </div>
+      <div class="col-md-4 button" id="2">
+        <%= button_to "Reading", action: "update", value: 'reading' %>
+      </div>
+      <div class="col-md-4 button" id="3">
+        <%= button_to "Gardening", action: "update", value: 'gardening' %>
+      </div>
+    </div>
+    <div class="row text-left">
+      <div class="col-md-4 button" id="4">
+        <%= button_to "Sports", action: "update", value: 'sports' %>
+      </div>
+      <div class="col-md-4 button" id="5">
+        <%= button_to "Walking", action: "update", value: 'walking' %>
+      </div>
+      <div class="col-md-4 button" id="6">
+        <%= button_to "Fishing", action: "update", value: 'fishing' %>
+      </div>
+    </div>
+    <div class="row text-left">
+      <div class="col-md-4 button" id="7">
+        <%= button_to "Dancing", action: "update", value: 'dancing' %>
+      </div>
+      <div class="col-md-4 button" id="8">
+        <%= button_to "Languages", action: "update", value: 'languages' %>
+      </div>
+      <div class="col-md-4 button" id="9">
+        <%= button_to "Music", action: "update", value: 'music' %>
+      </div>
+    </div>
+  
+    <div>
+      <button style="margin-top: 30px;" action: "show" class="btn btn-primary">Next Step...</button>
+    </div>
+</div>
+  <%= link_to 'Next', add_image_path %>
+</div>
+<script>
+function toggleClass(id) {
+  var element = document.getElementById(id);
+  element.classList.toggle("buttonChecked");
+}
+</script>

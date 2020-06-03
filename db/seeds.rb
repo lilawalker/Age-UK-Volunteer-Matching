@@ -44,7 +44,7 @@ Userinterest.new(user_id: 10003, interest_id: 20005).save(validate: false)
 Userinterest.new(user_id: 10003, interest_id: 20006).save(validate: false)
 
 #  pre-matched users
-Match.new(user_id: 10002, volunteer_id: 10000).save(validate: false)
+Match.new(older_id: 10002, volunteer_id: 10000).save(validate: false)
 
 
 puts "Seeds have been set and you're ready to go!"
