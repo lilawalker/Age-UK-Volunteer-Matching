@@ -22,7 +22,7 @@ class RegistrationsController < Devise::RegistrationsController
     respond_to do |format|
       if @user.update(user_params)
         if user_params[:image] == nil
-          format.html { redirect_to add_interests_path }
+          format.html { redirect_to add_userinterests_path }
         else
           format.html { redirect_to show_path }
         end

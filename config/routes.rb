@@ -9,13 +9,15 @@ Rails.application.routes.draw do
     get "/show" => "registrations#show", :as => "show"
   end
 
-   resources :matches
 
-  get "/add_interests" => "interests#add_interests", :as => "add_interests"
+  resources :matches
+  
+  get "/add_userinterests" => "userinterests#add_userinterests", :as => "add_userinterests"
+
 
   root to: "home#index"
 
-
+  post "/add_userinterests", to: 'userinterests#update'
   get '/add_info', to: 'registrations#add_info'
   get '/interests', to: 'interests#add_interests'
   get '/profile_show', to: 'profiles#show'
