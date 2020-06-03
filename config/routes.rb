@@ -1,29 +1,28 @@
 Rails.application.routes.draw do
-  # get 'home/index'
   devise_for :users, :controllers => {registrations: "registrations"}
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
+  
+  authenticated :user do
+    root to: 'matches#index', as: :authenticated_root
+  end
+  
   devise_scope :user do
     get "/add_info" => "registrations#add_info", :as => "add_information"
     get "/add_image" => "registrations#add_image", :as => "add_image"
     get "/show" => "registrations#show", :as => "show"
   end
-
+  
+  root to: 'home#index'
 
   resources :matches
   
   get "/add_userinterests" => "userinterests#add_userinterests", :as => "add_userinterests"
 
-
-  root to: "home#index"
+  # root to: "home#index"
 
   post "/add_userinterests", to: 'userinterests#update'
   get '/add_info', to: 'registrations#add_info'
   get '/interests', to: 'interests#add_interests'
   get '/profile_show', to: 'profiles#show'
   get '/confirmation', to: 'information#confirmation'
-  # get '/tell_us_about', to: 'information#tell_us_about_yourself'
-  # get '/interests', to: 'information#interests'
-  # get '/profile_show', to: 'profiles#show'
-  # get '/confirmation', to: 'information#confirmation'
 end
