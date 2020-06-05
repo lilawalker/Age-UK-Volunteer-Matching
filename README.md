@@ -7,7 +7,7 @@ Special thanks to [Ben Gittins](https://github.com/squareben1) and [Karlo de Guz
 
 **Hack for Heroes:** This project won second prize in the hackathon. The challenge was to build ground-breaking projects to support key workers on the frontline.\
 \
-**The Brief:** An idea was contributed to the Hackathon by Age UK, this was to create an app that allows seniors and volunteers to match based on mutual interests and hobbies. Similar to a dating app but optimised for users that may be less tech savvy. The profiles should include name, some details about the person and what their interests are.\
+**The Brief:** This was contributed to the Hackathon by an Age UK employee. Essentially, create an app that allows seniors and volunteers to match based on mutual interests and hobbies. Similar to a dating app but optimised for users that may be less tech savvy. The profiles should include name, some details about the person and what their interests are.\
 \
 **Presentation Video:** Check out the full [presentation](https://www.youtube.com/watch?v=tafnwcPW1Io) of our app, starting at minute 4:00.\
 \
