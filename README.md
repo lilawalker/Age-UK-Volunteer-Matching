@@ -1,11 +1,17 @@
-Age UK Volunteer Match Service
+Age UK Volunteer Matching Service
 ===================
 
 This repo is a **Hack for Heroes** app developed by  |  [Daria Thompson](https://github.com/dariathompson) | [David Stewart](https://github.com/DavidStewartLDN) |  [Kate Haffenden](https://github.com/naeglinghaff) | [Lila Walker](https://github.com/lilawalker) | [Patrick Oliver](https://github.com/poliver24) | [Stephan Ellenberger](https://github.com/stellenberger) | [Tom Ratcliffe](https://github.com/ratcliffetj)
 
 Special thanks to [Ben Gittins](https://github.com/squareben1) and [Karlo de Guzman](https://github.com/Kdeg0040) for their contributions at the start of the project.
 
-[Getting Started](#getting-started) | [Dependencies](#dependencies) | [Deployment](#deployment) | [Criteria for Building the Project](#criteria-for-building-the-project)
+**Hack for Heroes:** This project won second prize in the hackathon. The challenge was to build ground-breaking projects to support key workers on the frontline.\
+\
+**The Brief:** An app that allows seniors and volunteers to match based on mutual interests and hobbies. Similar to a dating app but optimised for users that may be less tech savvy. The profiles should include name, some details about the person and what their interests are.\
+\
+**Presentation Video:** Check out the full [presentation](https://www.youtube.com/watch?v=tafnwcPW1Io) of our app, starting at minute 4:00.\
+\
+[Getting Started](#getting-started) | [Dependencies](#dependencies) | [Deployment](#deployment) | [Criteria for Building the Project](#criteria-for-building-the-project) | [App Demo](#app-demo)
 
 ## Getting Started
 
@@ -109,3 +115,7 @@ As a volunteer
 So that I can connect with matches
 I would like to receive a notification containing my match's contact details
 ```
+
+## App Demo
+
+![Age UK Demo](public/images/AgeUk_demo.gif)
