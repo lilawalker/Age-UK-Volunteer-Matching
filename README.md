@@ -1,7 +1,7 @@
 Age UK Volunteer Matching Service
 ===================
 
-This repo is a **Hack for Heroes** app developed by  |  [Daria Thompson](https://github.com/dariathompson) | [David Stewart](https://github.com/DavidStewartLDN) |  [Kate Haffenden](https://github.com/naeglinghaff) | [Lila Walker](https://github.com/lilawalker) | [Patrick Oliver](https://github.com/poliver24) | [Stephan Ellenberger](https://github.com/stellenberger) | [Tom Ratcliffe](https://github.com/ratcliffetj)
+This app was developed over the course of three days for the **Hack for Heroes** hackathon hosted by Makers Academy. Developers of the app were: |  [Daria Thompson](https://github.com/dariathompson) | [David Stewart](https://github.com/DavidStewartLDN) |  [Kate Haffenden](https://github.com/naeglinghaff) | [Lila Walker](https://github.com/lilawalker) | [Patrick Oliver](https://github.com/poliver24) | [Stephan Ellenberger](https://github.com/stellenberger) | [Tom Ratcliffe](https://github.com/ratcliffetj)
 
 Special thanks to [Ben Gittins](https://github.com/squareben1) and [Karlo de Guzman](https://github.com/Kdeg0040) for their contributions at the start of the project.
 
